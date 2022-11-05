@@ -1,1 +1,1 @@
-Clash
+Clash Rule
