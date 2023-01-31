@@ -1,0 +1,44 @@
+[custom]
+
+ruleset=Global,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+ruleset=Global,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+ruleset=Global,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+ruleset=Global,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+ruleset=ETON,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+ruleset=ETON,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+ruleset=ETON,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+ruleset=Global,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+ruleset=Global,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+ruleset=Global,[]GEOIP,CN
+ruleset=Other,[]FINAL
+
+custom_proxy_group=ETON`select`(HK)`(TW)`(SG)`(JP)`(US)`(AU)`(DE)`(NL)`(AR)`(LU)`(TR)`^(?!.*(流量|到期|重置))
+custom_proxy_group=Global`select`[]DIRECT`[]ETON
+custom_proxy_group=Other`select`[]ETON`[]Global`(流量)`(到期)
+
+enable_rule_generator=true
+overwrite_original_rules=true
+
+;exclude_remarks=(IEPL|IPLC)
+
+;rename=( TNL| IEPL| IPLC)@
+;rename=(HK|TW|SG|JP|US|DE|TR|AR|AU|TH|UK|VN|KR|LU)(G|S|A|X|P|N|U|R)@$1
+
+emoji=(台湾|TW|TWN),🇨🇳
+emoji=(香港|HK|HKG),🇭🇰
+emoji=(日本|JP|JPN),🇯🇵
+emoji=(美国|US|USA),🇺🇸
+emoji=(德国|DE|DEU),🇩🇪
+emoji=(新加坡|SG|SGP),🇸🇬
+emoji=(土耳其|TR|TUR),🇹🇷
+emoji=(卢森堡|LU|LUX),🇱🇺
+emoji=(俄罗斯|RU),🇷🇺
+emoji=(阿根廷|AR),🇦🇷
+emoji=(加拿大|CA),🇨🇦
+emoji=(土耳其|TR),🇹🇷
+emoji=(澳大利亚|AU),🇦🇺
+emoji=(泰国|TH),🇹🇭
+emoji=(英国|UK),🇬🇧
+emoji=(越南|VN),🇻🇳
+emoji=(韩国|KR),🇰🇷
+emoji=(荷兰|NL),🇳🇱
